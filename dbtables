@@ -11,3 +11,13 @@ WITH (
 );
 ALTER TABLE public.login_user
   OWNER TO admin;
+
+
+CREATE SEQUENCE public.login_user_id_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 2
+  CACHE 1;
+ALTER TABLE public.login_user_id_seq
+  OWNER TO admin;
