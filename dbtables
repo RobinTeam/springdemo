@@ -1,0 +1,13 @@
+CREATE TABLE public.login_user
+(
+  id bigint NOT NULL DEFAULT nextval('login_user_id_seq'::regclass),
+  login_name character varying(20),
+  login_password character varying(20),
+  adminflg boolean DEFAULT false,
+  CONSTRAINT login_user_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.login_user
+  OWNER TO admin;
